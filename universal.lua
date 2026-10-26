@@ -1,4 +1,8 @@
-local vape = shared.vape 
+-- Add this at the very top of your universal.lua file:
+repeat task.wait() until shared.vape and shared.vape.Categories and shared.vape.Categories.Render
+local vape = shared.vape
+
+-- (Rest of your original universal.lua code follows below)
 local loadstring = function(...)
 	local res, err = loadstring(...)
 	if err and vape then
